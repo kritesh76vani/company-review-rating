@@ -1,0 +1,50 @@
+<form method="post" novalidate>
+    {% csrf_token %}
+  
+    {{ form.non_field_errors }}
+  
+    {{ form.source.errors }}
+    {{ form.source }}
+  
+    <table border="1">
+  
+        <tr>
+          <th>{{ form.company.label_tag }}</th>
+          <td>
+            {{ form.company.errors }}
+            {{ form.company }}
+          </td>
+        </tr>
+  
+        <tr>
+          <th>{{ form.user.label_tag }}</th>
+          <td>
+            {{ form.user.errors }}
+            {{ form.user }}
+          </td>
+        </tr>
+  
+        <tr>
+          <th>{{ form.content.label_tag }}</th>
+          <td>
+            {{ form.content.errors }}
+            {{ form.content }}
+            <br />
+            {{ form.content.help_text }}
+          </td>
+        </tr>
+        
+        <tr>
+            <th>{{ form.rating.label_tag }}</th>
+            <td>
+              {{ form.rating.errors }}
+              {{ form.rating }}
+            </td>
+          </tr>
+          
+    </table>
+  
+    <button type="submit">Submit</button>
+  </form>
+
+  <a href="http://localhost:8000"><strong>HOME</strong></a><br><br>

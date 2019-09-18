@@ -1,0 +1,35 @@
+
+
+
+<h1>{{compamy.name}}</h1><br><br>
+
+{% for rev in reviews %}
+<table border="1">
+      
+    <tr>
+      <th><strong>USER</strong></th>
+      <td>
+        {{ rev.user.username }}
+      </td>
+    </tr>
+
+    <tr>
+      <th><strong>REVIEW</strong></th>
+      <td>
+        {{ rev.content }}
+        {{ rev.content }}
+      </td>
+    </tr>
+
+    <tr>
+        <th><strong>RATING</strong></th>
+        <td>
+          {{ rev.rating }}
+        </td>
+      </tr>
+    
+    
+</table><br><br>
+{% endfor %}
+
+<a href="http://localhost:8000"><strong>HOME</strong></a><br><br>

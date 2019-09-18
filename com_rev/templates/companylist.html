@@ -1,0 +1,5 @@
+{% for com_in in data %}
+<li><a href="{% url 'detail' com_in.id %}"><strong>{{ com_in.name }}</strong></a></li>
+{% endfor %}
+
+<a href="http://localhost:8000"><strong>HOME</strong></a><br><br>
